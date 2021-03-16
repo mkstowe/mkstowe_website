@@ -1,34 +1,23 @@
-import pathlib
-import os
 import random
-from gensim.models import Word2Vec
 import mkstowe.variegata
-import csv
-
-
-# def events_to_dict():
-#     event_dict = {}
-#     with open(mkstowe.app.config["STATIC_ROOT"]/'events.csv') as file:
-#         for line in csv.DictReader(file, fieldnames=["story", "event_idx", "text"], quotechar='"', delimiter=',',
-#                                    quoting=csv.QUOTE_ALL, skipinitialspace=True):
-#             if line['story'] not in event_dict:
-#                 event_dict[line['story']] = [line['text']]
-#             else:
-#                 event_dict[line['story']].append(line['text'])
-#
-#     return event_dict
-#
-#
-# mkstowe.app.config["VARIEGATA_MODEL"] = Word2Vec.load(str(mkstowe.app.config["VARIEGATA_ROOT"]/'model'/'variegata.model'))
-# mkstowe.app.config["VARIEGATA_EVENTS_LIST"] = events_to_dict()
 
 
 def generate_story(num_nodes):
+    db = mkstowe.variegata.database.get_db()
     story_events = []
-    cur_node = str(random.choice(list(mkstowe.app.config["VARIEGATA_EVENTS_LIST"].keys()))) + "_0"
-    for i in range(num_nodes):
-        cur_node = random.choice(mkstowe.app.config["VARIEGATA_MODEL"].most_similar(cur_node)[:10])[0]
-        split_node = cur_node.split("_")
-        story_events.append(mkstowe.app.config["VARIEGATA_EVENTS_LIST"][split_node[0]][int(split_node[1])])
+
+    nodes = db.execute('SELECT * FROM events WHERE event_idx = 0').fetchall()
+    first_node = random.choice(nodes)
+    story_events.append(first_node['text'])
+    curr_node = first_node['story_num'] + "_0"
+
+    for i in range(num_nodes - 1):
+        curr_node = random.choice(mkstowe.app.config["VARIEGATA_MODEL"].most_similar(curr_node)[:5])[0]
+        split_node = curr_node.split("_")
+        curr_text = db.execute(
+            'SELECT text FROM events WHERE (story_num = ? AND event_idx = ?)',
+            (split_node[0], int(split_node[1]),)
+        ).fetchone()['text']
+        story_events.append(curr_text)
 
     return story_events
