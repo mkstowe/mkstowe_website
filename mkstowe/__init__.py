@@ -21,4 +21,4 @@ app.config["VARIEGATA_MODEL"] = Word2Vec.load(str(app.config["VARIEGATA_ROOT"]/'
 
 import mkstowe.views  # noqa: E402  pylint: disable=wrong-import-position
 import mkstowe.variegata  # noqa: E402  pylint: disable=wrong-import-position
-import mkstowe.variegata.database  # noqa: E402  pylint: disable=wrong-import-position
+import mkstowe.variegata.models  # noqa: E402  pylint: disable=wrong-import-position

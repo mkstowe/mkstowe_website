@@ -12,4 +12,4 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 MAX_CONTENT_LENGTH = 16 * 1024 * 1024
 
 VARIEGATA_ROOT = MKSTOWE_ROOT/'variegata'
-DATABASE_FILENAME = VARIEGATA_ROOT/'data'/'variegata.sqlite3'
+SECRETS_FILE = VARIEGATA_ROOT/'secrets.txt'
