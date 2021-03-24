@@ -11,5 +11,5 @@ from mkstowe.variegata.generator import generate_story
 @mkstowe.app.route('/projects/variegata/story/', methods=['GET', 'POST'])
 def story():
     """Display /story/ route."""
-    context = {"events": generate_story.generate_story(10)}
+    context = {"events": generate_story.generate_story(20)}
     return flask.render_template("variegata_story.html", **context)
