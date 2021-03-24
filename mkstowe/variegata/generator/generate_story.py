@@ -1,9 +1,7 @@
-import pathlib
-import os
 import random
+
 import mkstowe.variegata
 from mkstowe.variegata.model import keyword_extraction
-import csv
 
 
 def generate_story(num_nodes):

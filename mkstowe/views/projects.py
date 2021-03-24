@@ -46,7 +46,7 @@ def variegata_post(year, month, day):
     return flask.render_template("master.html", **context)
 
 
-@mkstowe.app.route('/projects/variegata/<year>/<month>/<day>/example', methods=['GET'])
+@mkstowe.app.route('/projects/variegata/<year>/<month>/<day>/example/', methods=['GET'])
 def show_example(year, month, day):
     """Display post on /projects/variegata/."""
     context = {"title": "{}/{}/{}".format(year, month, day), "desc": "Project Variegata dev blog post by Michael "
@@ -57,7 +57,8 @@ def show_example(year, month, day):
 @mkstowe.app.route('/projects/cloud/', methods=['GET'])
 def cloud():
     """Display /projects/cloud/ route."""
-    context = {"title": "Project Cloud", "desc": "WolverineSoft Project Cloud dev blog posts by Michael Stowe", "load_file": "cloud.html"}
+    context = {"title": "Project Cloud", "desc": "WolverineSoft Project Cloud dev blog posts by Michael Stowe", 
+               "load_file": "cloud.html"}
     return flask.render_template("master.html", **context)
 
 
