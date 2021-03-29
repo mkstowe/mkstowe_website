@@ -4,7 +4,6 @@ import mariadb
 import sys
 import os
 from gensim.models import Word2Vec
-import pickle
 
 
 def get_db():
@@ -38,40 +37,6 @@ def get_model():
             sys.exit(1)
 
     return flask.g.model
-
-
-def get_vectorizer():
-    if 'vectorizer' not in flask.g:
-        try:
-            flask.g.vectorizer = pickle.load(open(str(mkstowe.app.config["VARIEGATA_ROOT"]/'data'/'vectorizer.pk'), 'rb'))
-        except os.error as e:
-            print(f"Error loading vectorizer: {e}")
-            sys.exit(1)
-
-    return flask.g.vectorizer
-
-
-def get_transformed_vectorizer():
-    if 'trans_vec' not in flask.g:
-        try:
-            flask.g.trans_vec = pickle.load(open(str(mkstowe.app.config["VARIEGATA_ROOT"]/'data'/'transformed_vec.pk'),
-                                                 'rb'))
-        except os.error as e:
-            print(f"Error loading vectorizer: {e}")
-            sys.exit(1)
-
-    return flask.g.trans_vec
-
-
-def get_dataframe():
-    if 'df' not in flask.g:
-        try:
-            flask.g.df = pickle.load(open(str(mkstowe.app.config["VARIEGATA_ROOT"]/'data'/'dataframe.pk'), 'rb'))
-        except os.error as e:
-            print(f"Error loading vectorizer: {e}")
-            sys.exit(1)
-
-    return flask.g.df
 
 
 @mkstowe.app.teardown_appcontext
