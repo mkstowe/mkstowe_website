@@ -57,7 +57,7 @@ def show_example(year, month, day):
 @mkstowe.app.route('/projects/cloud/', methods=['GET'])
 def cloud():
     """Display /projects/cloud/ route."""
-    context = {"title": "Project Cloud", "desc": "WolverineSoft Project Cloud dev blog posts by Michael Stowe", 
+    context = {"title": "Project Cloud", "desc": "WolverineSoft Project Cloud dev blog posts by Michael Stowe",
                "load_file": "cloud.html"}
     return flask.render_template("master.html", **context)
 
