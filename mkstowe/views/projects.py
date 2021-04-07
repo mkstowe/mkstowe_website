@@ -42,22 +42,28 @@ def variegata():
 def variegata_post(year, month, day):
     """Display post on /projects/variegata/."""
     context = {"title": "{}/{}/{}".format(year, month, day), "desc": "Project Variegata dev blog post by Michael "
-               "Stowe", "load_file": "variegata_posts/{}_{}_{}.html".format(year, month, day)}
+                                                                     "Stowe",
+               "load_file": "variegata_posts/{}_{}_{}.html".format(year, month, day)}
     return flask.render_template("master.html", **context)
 
 
-@mkstowe.app.route('/projects/variegata/<year>/<month>/<day>/example/', methods=['GET'])
-def show_example(year, month, day):
+@mkstowe.app.route('/projects/variegata/<year>/<month>/<day>/example/', methods=['GET'], defaults={'example_num': None})
+@mkstowe.app.route('/projects/variegata/<year>/<month>/<day>/example/<example_num>/', methods=['GET'])
+def show_example(year, month, day, example_num):
     """Display post on /projects/variegata/."""
-    context = {"title": "{}/{}/{}".format(year, month, day), "desc": "Project Variegata dev blog post by Michael "
-               "Stowe"}
-    return flask.render_template("variegata_posts/{}_{}_{}/example.html".format(year, month, day), **context)
+    context = {"title": "{}/{}/{}".format(year, month, day), "desc": "Project Variegata dev blog post by Michael Stowe"}
+
+    if example_num is None:
+        return flask.render_template("variegata_posts/{}_{}_{}/example.html".format(year, month, day), **context)
+    else:
+        return flask.render_template("variegata_posts/{}_{}_{}/example_{}.html".format(year, month, day,
+                                                                                       example_num), **context)
 
 
 @mkstowe.app.route('/projects/cloud/', methods=['GET'])
 def cloud():
     """Display /projects/cloud/ route."""
-    context = {"title": "Project Cloud", "desc": "WolverineSoft Project Cloud dev blog posts by Michael Stowe", 
+    context = {"title": "Project Cloud", "desc": "WolverineSoft Project Cloud dev blog posts by Michael Stowe",
                "load_file": "cloud.html"}
     return flask.render_template("master.html", **context)
 
