@@ -1,0 +1,82 @@
+@import "../../variables.scss";
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px;
+  margin-top: 50px;
+
+  :last-child {
+    .tab-tile {
+      border-bottom: 3px solid $color-2;
+    }
+  }
+}
+
+.tab {
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+
+  font-size: 28px;
+  text-transform: uppercase;
+  border-top: 3px solid $color-2;
+
+  h3 {
+    font-weight: 700;
+    color: $color-2;
+    letter-spacing: -2px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.tab-tile {
+  display: flex;
+
+  padding: 18px;
+  transition: all 0.2s ease-out;
+}
+
+.tab.selected .tab-tile {
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0, 0, 0, 2);
+}
+
+.tab-tile::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+
+  height: 100%;
+  width: 100%;
+
+  opacity: 0.9;
+
+  transition: all 0.2s;
+  transform: scaleX(0);
+}
+
+.tab-tile:hover {
+  opacity: 1;
+  background-color: rgba($color-2, 0.25);
+}
+
+.tab.selected .tab-tile::before {
+  opacity: 1;
+
+  transform: scaleX(1);
+  background-color: rgba($color-2, 0.8);
+
+  transition-delay: 0.2s;
+}
+
+.tab.selected h3 {
+  color: $color-1;
+  transition-delay: 0.35s;
+}

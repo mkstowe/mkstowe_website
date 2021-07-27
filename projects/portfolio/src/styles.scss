@@ -1,0 +1,57 @@
+@import '~minireset.css';
+@import './variables.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Material+Icons+Outlined|Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&display=swap');
+
+html {
+    font-family: 'Assistant', sans-serif;
+    color: $color-2;
+    overflow: hidden;
+    font-size: 22px;
+}
+
+html, body {
+    height: 100%;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 800;
+
+    &.is-bold {
+        font-weight: 900;
+        letter-spacing: -2px;
+    }
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+
+    &.is-bold {
+        font-weight: 700;
+    }
+}
+
+h3 {
+    font-size: 36px;
+
+    &.is-bold {
+        font-weight: 700;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+.is-uppercase {
+    text-transform: uppercase;
+}
+
+.content {
+    padding: 30px;
+    padding-top: 0px;
+}
