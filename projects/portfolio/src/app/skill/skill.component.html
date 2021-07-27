@@ -1,0 +1,13 @@
+<div class="skill-wrapper">
+
+    <div class="skill">
+        <i class="devicon-{{ icon_name }}-plain colored devicon-plain"></i>
+        <div class="skill-name is-bold">{{ skill }}</div>
+    </div>
+
+    <div class="exp-bar">
+        <div class="exp-bar-back"></div>
+        <div class="exp-bar-front" [ngStyle]="{ 'width': percentage + '%' }"></div>
+    </div>
+
+</div>

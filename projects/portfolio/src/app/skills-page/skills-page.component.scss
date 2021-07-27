@@ -1,0 +1,23 @@
+@import "../../variables.scss";
+
+.skill-group {
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 3px solid $color-2;
+
+    h3 {
+        font-size: 28px;
+    }
+
+    .skill-list {
+        margin-top: 25px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+app-skill {
+    width: 50%;
+    margin-bottom: 25px;
+}

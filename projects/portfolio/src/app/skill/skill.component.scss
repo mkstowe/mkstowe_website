@@ -1,0 +1,49 @@
+@import "../../variables.scss";
+
+.skill-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+}
+
+.skill {
+    display: flex;
+    height: 60px;
+
+    .skill-name {
+        position: relative;
+        top: 4px;
+        font-size: 32px;
+        padding-left: 15px;
+    }
+}
+
+.exp-bar {
+    width: 100%;
+    height: 25px;
+    margin-top: 20px;
+    position: relative;
+
+    .exp-bar-back {
+        width: 100%;
+        height: 100%;
+        border: 3px solid $color-2;
+        position: absolute;
+    }
+
+    .exp-bar-front {
+        height: 100%;
+        position: absolute;
+        background-color: $color-2;
+    }
+}
+
+
+.devicon-plain {
+    font-size: 60px;
+}
+
+.colored {
+    color: $color-2;
+}
