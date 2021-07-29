@@ -69,8 +69,23 @@ a {
         list-style-type: disc;
         padding-left: 50px;
     }
+
+    p {
+        margin: 20px 0;
+    }
 }
 
 .seg ~ .seg {
     padding: 50px 0;
+}
+
+.content a {
+    color: $color-3;
+    text-decoration: underline;
+}
+
+video {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
 }
