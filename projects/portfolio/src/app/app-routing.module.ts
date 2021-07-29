@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutPageComponent } from './about-page/about-page.component';
-import { CloudComponent } from './cloud/cloud/cloud.component';
-import { GoldComponent } from './cloud/cloud/gold/gold.component';
-import { PreAlphaIComponent } from './cloud/cloud/pre-alpha-i/pre-alpha-i.component';
-import { PreAlphaIIComponent } from './cloud/cloud/pre-alpha-ii/pre-alpha-ii.component';
-import { PreAlphaIIIPreBetaIComponent } from './cloud/cloud/pre-alpha-iii-pre-beta-i/pre-alpha-iii-pre-beta-i.component';
-import { PreBetaIPreBetaIIComponent } from './cloud/cloud/pre-beta-i-pre-beta-ii/pre-beta-i-pre-beta-ii.component';
+import { CloudComponent } from './cloud/cloud.component';
+import { GoldComponent } from './cloud/gold/gold.component';
+import { PreAlphaIComponent } from './cloud/pre-alpha-i/pre-alpha-i.component';
+import { PreAlphaIIComponent } from './cloud/pre-alpha-ii/pre-alpha-ii.component';
+import { PreAlphaIIIPreBetaIComponent } from './cloud/pre-alpha-iii-pre-beta-i/pre-alpha-iii-pre-beta-i.component';
+import { PreBetaIPreBetaIIComponent } from './cloud/pre-beta-i-pre-beta-ii/pre-beta-i-pre-beta-ii.component';
 import { ExperiencePageComponent } from './experience-page/experience-page.component';
 import { ProjectsPageComponent } from './projects-page/projects-page.component';
 import { SkillsPageComponent } from './skills-page/skills-page.component';
