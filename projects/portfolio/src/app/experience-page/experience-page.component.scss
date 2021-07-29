@@ -1,0 +1,22 @@
+@import "../../variables.scss";
+
+.seg {
+    border-bottom: 3px solid $color-2;
+    padding-bottom: 50px;
+
+    ul {
+        margin-top: 10px;
+        list-style-type: disc;
+        padding-left: 50px;
+    }
+}
+
+.seg ~ .seg {
+    padding: 50px 0;
+}
+
+.education {
+    padding-top: 50px;
+}
+
+
