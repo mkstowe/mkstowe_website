@@ -10,6 +10,12 @@ import { ExperiencePageComponent } from './experience-page/experience-page.compo
 import { SkillsPageComponent } from './skills-page/skills-page.component';
 import { ProjectsPageComponent } from './projects-page/projects-page.component';
 import { SkillComponent } from './skill/skill.component';
+import { CloudComponent } from './cloud/cloud/cloud.component';
+import { PreAlphaIComponent } from './cloud/cloud/pre-alpha-i/pre-alpha-i.component';
+import { PreAlphaIIComponent } from './cloud/cloud/pre-alpha-ii/pre-alpha-ii.component';
+import { PreAlphaIIIPreBetaIComponent } from './cloud/cloud/pre-alpha-iii-pre-beta-i/pre-alpha-iii-pre-beta-i.component';
+import { PreBetaIPreBetaIIComponent } from './cloud/cloud/pre-beta-i-pre-beta-ii/pre-beta-i-pre-beta-ii.component';
+import { GoldComponent } from './cloud/cloud/gold/gold.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +26,12 @@ import { SkillComponent } from './skill/skill.component';
     SkillsPageComponent,
     ProjectsPageComponent,
     SkillComponent,
+    CloudComponent,
+    PreAlphaIComponent,
+    PreAlphaIIComponent,
+    PreAlphaIIIPreBetaIComponent,
+    PreBetaIPreBetaIIComponent,
+    GoldComponent,
   ],
   imports: [
     BrowserModule,
