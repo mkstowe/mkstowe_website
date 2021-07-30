@@ -61,7 +61,7 @@ a {
 }
 
 .seg {
-    border-bottom: 3px solid $color-2;
+    border-top: 3px solid $color-2;
     padding-bottom: 50px;
 
     ul {
@@ -72,6 +72,10 @@ a {
 
     p {
         margin: 20px 0;
+    }
+
+    &:first-of-type {
+        border-top: none;
     }
 }
 
