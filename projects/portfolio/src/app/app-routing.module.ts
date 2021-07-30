@@ -44,7 +44,7 @@ const routes: Routes = [
   { path: 'projects/variegata/2021/03/17', component: VariegataPost6Component},
   { path: 'projects/variegata/2021/03/24', component: VariegataPost7Component},
   { path: 'projects/variegata/2021/03/31', component: VariegataPost8Component},
-  { path: 'projects/variegata/2021/04/04', component: VariegataPost9Component},
+  { path: 'projects/variegata/2021/04/07', component: VariegataPost9Component},
   { path: 'projects/variegata/2021/04/21', component: VariegataPost10Component},
 ];
 

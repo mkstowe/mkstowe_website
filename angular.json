@@ -47,7 +47,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/portfolio/src/favicon.ico",
-              "projects/portfolio/src/assets"
+              "projects/portfolio/src/assets",
+              "src/static-pages/variegata-example1.html"
             ],
             "styles": [
               "projects/portfolio/src/styles.scss"

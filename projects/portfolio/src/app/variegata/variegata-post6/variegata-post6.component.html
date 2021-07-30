@@ -1,1 +1,48 @@
-<p>variegata-post6 works!</p>
+<div class="content">
+    <h2 class="is-bold">March 17, 2021</h2>
+
+    <div class="seg">
+        <h3 class="blog_topic"><strong>Progress So Far</strong></h3>
+        <p>This week was mostly spent trying to solve issues. There were more setbacks than I would have liked, but
+            they are in the process of being fixed!</p>
+
+        <p>The main technologies used for this step include:</p>
+        <ul>
+            <li>Python/Flask</li>
+            <li>MySQL/MariaDB</li>
+        </ul>
+    </div>
+
+    <div class="seg">
+        <h3 class="blog_topic"><strong>Debugging Limbo</strong></h3>
+        <p>This week seemed to be a never-ending cycle of issues. When trying to train the model on a larger
+            dataset using SQLite as the database system, my computer kept having troubles handling the larger files.
+            Additionally, uploading the database to my web hosting server performed even worse. I then made the move
+            to my web host's integrated database system - MariaDB (a fork of MySQL).</p>
+
+        <p>The issue I ran into next was
+            getting access to the database from my python scripts. The web host does not allow direct remote access
+            to the database, so I had to figure out how to set up an SSH tunnel to send the requests from my local
+            machine to the server. After a bit of debugging and reading up on the documentation for the MariaDB
+            python module, I was able to get it working on my computer.</p>
+
+        <p>Just when I thought everything was fine and dandy, I pushed the update to the web host server. Of course,
+            everything broke once again. This time my entire site went down, giving only a 500 error. At this point
+            I contacted my web host via live chat, and went through probably the longest tech support session I've
+            experienced. When we figured out that the 500 error was due to a single malformed file, we found that
+            the MariaDB module in python does not work properly with the server due to certain connector packages
+            not being available, which I found odd considering this is the recommended way to manage their built-in
+            databases through python. Many hours and three tech support specialists later, no solution was found.
+            They finally decided to pass it on to their technicians and opened up a ticket, which I am still waiting
+            to be dealt with on their end.</p>
+
+        <p>Long story short, not much progress was made on the actual functionality of the app. I can just hope that
+            it all gets resolved soon.</p>
+    </div>
+
+    <div class="seg">
+        <h3 class="blog_topic"><strong>Moving Forward</strong></h3>
+        <p>Because I was not able to do much this week, my goals for this week are mostly the same as last week -
+            with an emphasis on my rant above. </p>
+    </div>
+</div>

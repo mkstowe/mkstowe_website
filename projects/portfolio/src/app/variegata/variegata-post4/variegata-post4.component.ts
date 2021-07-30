@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-variegata-post4',
@@ -7,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VariegataPost4Component implements OnInit {
 
-  constructor() { }
-
+  constructor(private titleService:Title) {
+    this.titleService.setTitle("Michael Stowe | Project Variegata");
+  }
   ngOnInit(): void {
   }
 

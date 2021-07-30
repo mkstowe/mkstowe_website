@@ -1,1 +1,51 @@
-<p>variegata-post9 works!</p>
+<div class="content">
+    <h2 class="is-bold">April 7, 2021</h2>
+
+    <div class="seg">
+        <h3 class="blog_topic"><strong>Granular Text</strong></h3>
+        <p>As we could see from previous iterations, the generated stories are not very good, largely due to he events
+            being very disjointed. The first step I took to try to improve this was to make the text much more
+            granular. Rather than lumping entire events in the form of paragraphs together as the transitions, I
+            broke each event down into individual sentences. This would allow the events generated to be a lot more
+            specific to the overall story, rather than just having a couple of commonalities.</p>
+        <p>An example of generated text with smaller pieces of source text can be seen
+            <a href="../../../assets/static-pages/variegata-example4.html" target="_blank">here</a>.</p>
+        <p>Whether or not that's an improvement is up to the reader. I personally thing it reads almost like a poem.</p>
+    </div>
+
+    <div class="seg">
+        <h3 class="blog_topic"><strong>Playing with Data</strong></h3>
+        <p>The next step was to try out different types of source text. Up until now, I have primarily been using
+            the same pool of stories pulled from Choose Your Adventure. The downside to this is that there is not
+            really any set grouping to those stories. They can be any genre, and deal with any topic. This can make
+            it difficult to find acceptable ways to connect events across stories. To combat this, I tried using
+            more specific source text to feed to the model. The first of which was a collection of Edgar Allen Poe's
+            stories and poems.</p>
+        <p>A story generated from Poe's works can be seen <a href="../../../assets/static-pages/variegata-example5.html"
+                                                             target="_blank">here</a>.</p>
+        <p>While still being fairly disjointed like before, using text entirely from a single author definitely
+            makes the story feel a bit more comprehensive. All of the events generated are written in a similar
+            style to each other, making them feel like they belong together - even if the actual content does not
+            make a ton of sense when read out of context.</p>
+        <p>There are a number of other data sets I am working on trying out to see how they compare, including wine
+            reviews and news articles. These, however, are incredibly large compared to what I have already tried
+            out, so the models are taking an extremely long time to be created. The model for the news articles is
+            still being made as I write this. I may have to trim down the amount of data being processed if it does
+            not end up working, but either way I will be trying out these different source texts.</p>
+    </div>
+
+    <div class="seg">
+        <h3 class="blog_topic"><strong>WolverineSoft Presentation</strong></h3>
+        <p>I have been asked to present my work so far on this project to WolverineSoft - the University of
+            Michigan's video game design club. I have been preparing this presentation over the past few days and
+            updating it with the up-to-date experiments. I plan on posting the slides here later this week, so stay
+            tuned!</p>
+    </div>
+
+    <div class="seg">
+        <h3 class="blog_topic"><strong>Moving Forward</strong></h3>
+        <p>While I am happy to see that using a more niche source text improves the overall "feel" of the generated
+            stories, I still want to make them work better. Over the next week, I plan on continuing to figure out
+            ways to tweak the model and generator to make these stories feel more natural.</p>
+    </div>
+</div>

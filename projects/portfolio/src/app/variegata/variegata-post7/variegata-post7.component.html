@@ -1,1 +1,67 @@
-<p>variegata-post7 works!</p>
+<div class="content">
+    <h2 class="is-bold">March 24, 2021</h2>
+
+    <div class="seg">
+        <h3 class="blog_topic"><strong>Progress So Far</strong></h3>
+        <p>I successfully fixed the issues that I was experiencing last week (at least, as far as I can tell) and
+            was able to continue improving the actual project. The main update was converting the node2vec model to
+            use keywords extracted from events, rather than just the labels.</p>
+
+        <p>The main technologies used for this step include:</p>
+        <ul>
+            <li>Python/Flask</li>
+            <li>MySQL/MariaDB</li>
+            <li>NetworkX</li>
+            <li>node2vec</li>
+        </ul>
+    </div>
+
+    <div class="seg">
+        <h3 class="blog_topic"><strong>Resolving Hosting Issues</strong></h3>
+        <p>As discussed in last week's post, there were a whole lot of issues revolving around getting the necessary
+            technologies to work on my web host's server. With the help of a couple of the technicians over at the
+            web host, I was able to get those technologies properly installed and converted some of my code
+            accordingly to be able to properly connect to my database via Python scripts. As far as I can tell, it
+            is all working adequately well now!</p>
+    </div>
+
+    <div class="seg">
+        <h3 class="blog_topic"><strong>Keyword-Based Model</strong></h3>
+        <p>Once all of the administrative stuff was taken care of, I got back to working on my actual project. The
+            last prototype I discussed simply used the labels generated for each event to determine which events are
+            similar. This method does successfully predict and embed events into our story graphs, but the problem
+            is that it constrained embedded events to only the story that was currently being looked at.</p>
+
+        <p>To solve this issue, I first scrape the stories on the internet and save them to their own files. Next, I
+            generate a graph for each story in a similar way as before, except using keywords. To do this, I
+            generate a number of keywords for each event (in my initial tests I have been using five keywords for
+            each). For each event that is connected to each other event, I create edges for each combination of
+            keywords. Once each graph is generated, I add it to a larger "master" graph, which is a composition of
+            each individual graph. Any time a keyword is added that already exists in the master, rather than
+            creating a duplicate node it just adds all of the new edges to the existing node.</p>
+
+        <p>Once the master keyword graph is generated, I train a model using the node2vec algorithm just like before,
+            and query this model each time a event is needed during our story generation.</p>
+    </div>
+
+    <div class="seg">
+        <h3 class="blog_post"><strong>Current Generated "Stories"</strong></h3>
+        <p>In the current state of the generation system, rather than entire events being inserted it is just
+            individual keywords. While this may seem like a step backwards since we no longer get entire stories, it
+            is actually a much more robust system - especially because of the fact that we are able to create
+            embeddings across every story in our database. The next step is to finish implementing the search engine
+            system discussed before to be able to query events from our database using these keywords that are being
+            returned.</p>
+    </div>
+
+    <div class="seg">
+        <h3 class="blog_post"><strong>Moving Forward</strong></h3>
+        <p>The biggest task for this coming week is to get the search engine for events finished so that we can
+            generate more complete stories instead of individual words. Another thing I plan on looking into is the
+            variety of words. In its current state, the model has a tendency to bounce back and forth between the
+            same words sometimes. This is especially true when a generated keyword is something very specific, so
+            there's really only one place for the generator to go. I will be looking into ways to try to avoid
+            getting stuck in a "keyword loop", and find a way to determine what is an acceptable number of
+            repetitions for a given keyword.</p>
+    </div>
+</div>
