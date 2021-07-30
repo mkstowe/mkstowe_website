@@ -24,32 +24,32 @@ import { VariegataComponent } from './variegata/variegata.component';
 
 const routes: Routes = [
   { path: '', component: AboutPageComponent, data: { tab: 1 } },
-  { path: 'experience', component: ExperiencePageComponent, data: { tab: 2 } },
-  { path: 'skills', component: SkillsPageComponent, data: { tab: 3 } },
+  { path: 'skills', component: SkillsPageComponent, data: { tab: 2 } },
+  { path: 'experience', component: ExperiencePageComponent, data: { tab: 3 } },
   { path: 'projects', component: ProjectsPageComponent, data: { tab: 4 } },
 
-  { path: 'projects/cloud', component: CloudComponent },
-  { path: 'projects/cloud/pre-alpha-i', component: PreAlphaIComponent },
-  { path: 'projects/cloud/pre-alpha-ii', component: PreAlphaIIComponent },
-  { path: 'projects/cloud/pre-alpha-iii-pre-beta-i', component: PreAlphaIIIPreBetaIComponent },
-  { path: 'projects/cloud/pre-beta-i-pre-beta-ii', component: PreBetaIPreBetaIIComponent },
-  { path: 'projects/cloud/gold', component: GoldComponent },
+  { path: 'projects/cloud', component: CloudComponent, data: { tab: 5 } },
+  { path: 'projects/cloud/pre-alpha-i', component: PreAlphaIComponent, data: { tab: 6 } },
+  { path: 'projects/cloud/pre-alpha-ii', component: PreAlphaIIComponent, data: { tab: 6 } },
+  { path: 'projects/cloud/pre-alpha-iii-pre-beta-i', component: PreAlphaIIIPreBetaIComponent, data: { tab: 6 } },
+  { path: 'projects/cloud/pre-beta-i-pre-beta-ii', component: PreBetaIPreBetaIIComponent, data: { tab: 6 } },
+  { path: 'projects/cloud/gold', component: GoldComponent, data: { tab: 6 } },
 
-  { path: 'projects/variegata', component: VariegataComponent},
-  { path: 'projects/variegata/2021/02/03', component: VariegataPost1Component},
-  { path: 'projects/variegata/2021/02/10', component: VariegataPost2Component},
-  { path: 'projects/variegata/2021/02/17', component: VariegataPost3Component},
-  { path: 'projects/variegata/2021/03/03', component: VariegataPost4Component},
-  { path: 'projects/variegata/2021/03/10', component: VariegataPost5Component},
-  { path: 'projects/variegata/2021/03/17', component: VariegataPost6Component},
-  { path: 'projects/variegata/2021/03/24', component: VariegataPost7Component},
-  { path: 'projects/variegata/2021/03/31', component: VariegataPost8Component},
-  { path: 'projects/variegata/2021/04/07', component: VariegataPost9Component},
-  { path: 'projects/variegata/2021/04/21', component: VariegataPost10Component},
+  { path: 'projects/variegata', component: VariegataComponent, data: { tab: 5 } },
+  { path: 'projects/variegata/2021/02/03', component: VariegataPost1Component, data: { tab: 6 } },
+  { path: 'projects/variegata/2021/02/10', component: VariegataPost2Component, data: { tab: 6 } },
+  { path: 'projects/variegata/2021/02/17', component: VariegataPost3Component, data: { tab: 6 } },
+  { path: 'projects/variegata/2021/03/03', component: VariegataPost4Component, data: { tab: 6 } },
+  { path: 'projects/variegata/2021/03/10', component: VariegataPost5Component, data: { tab: 6 } },
+  { path: 'projects/variegata/2021/03/17', component: VariegataPost6Component, data: { tab: 6 } },
+  { path: 'projects/variegata/2021/03/24', component: VariegataPost7Component, data: { tab: 6 } },
+  { path: 'projects/variegata/2021/03/31', component: VariegataPost8Component, data: { tab: 6 } },
+  { path: 'projects/variegata/2021/04/07', component: VariegataPost9Component, data: { tab: 6 } },
+  { path: 'projects/variegata/2021/04/21', component: VariegataPost10Component, data: { tab: 6 } },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'top' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
