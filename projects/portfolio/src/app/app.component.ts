@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { translateTransition } from './routing-transitions';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +14,12 @@ import { translateTransition } from './routing-transitions';
   ],
 })
 export class AppComponent implements OnInit {
+
+  year = new Date().getFullYear();
+
+  faEnvelope = faEnvelope;
+  faGithub = faGithub;
+  faLinkedin = faLinkedinIn;
 
   constructor(private router: Router) { }
 
@@ -25,7 +33,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.events.subscribe((evt) => {
-      setTimeout(() => document.getElementsByClassName("content-section")[0].scrollTo({top: 0, left: 0, behavior: 'auto'}), 175)
+      setTimeout(() => document.getElementsByClassName("content-section")[0].scrollTo({top: 0, left: 0, behavior: 'auto'}), 200)
   });
   }
 }

@@ -5,7 +5,7 @@
   flex-direction: column;
 
   padding: 10px;
-  margin-top: 50px;
+  margin-top: 30px;
 
   :last-child {
     .tab-tile {
@@ -19,7 +19,7 @@
   text-decoration: none;
   z-index: 1;
 
-  font-size: 28px;
+  font-size: 24px;
   text-transform: uppercase;
   border-top: 3px solid $color-2;
 
@@ -35,7 +35,7 @@
 .tab-tile {
   display: flex;
 
-  padding: 18px;
+  padding: 12px;
   transition: all 0.2s ease-out;
 }
 
