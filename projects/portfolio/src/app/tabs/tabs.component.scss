@@ -29,6 +29,7 @@
     letter-spacing: -2px;
     width: 100%;
     text-align: center;
+    font-size: 2vw;
   }
 }
 
@@ -79,4 +80,28 @@
 .tab.selected h3 {
   color: $color-1;
   transition-delay: 0.35s;
+}
+
+@media screen and (max-width: 950px) {
+  .tabs {
+    padding: 0;
+  }
+
+  .tab-tile {
+    padding: 40px;
+
+    h3 {
+      font-size: 36px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .tab-tile {
+    padding: 20px;
+
+    h3 {
+      font-size: 28px;
+    }
+  }
 }

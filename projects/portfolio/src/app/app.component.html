@@ -15,9 +15,28 @@
     </div>
 
     <div class="footer">
-      <p>Copyright &copy; {{ year }} Michael Stowe</p>
+      <p>&copy; {{ year }} Michael Stowe</p>
     </div>
 
+  </div>
+
+  <div class="mobile-header">
+    <a routerLink=""><h1 class="is-uppercase">Michael Stowe</h1></a>
+    <fa-icon [icon]="faBars" class="menu-icon" (click)="toggleMenu()"></fa-icon>
+  </div>
+
+  <div class="mobile-menu">
+    <app-tabs></app-tabs>
+
+    <div class="socials">
+      <a href="mailto:michaelstowe12@gmail.com" target="_blank"><fa-icon [icon]="faEnvelope" ></fa-icon></a>
+      <a href="https://www.linkedin.com/in/mkstowe/" target="_blank"><fa-icon [icon]="faLinkedin"></fa-icon></a>
+      <a href="https://github.com/mkstowe" target="_blank"><fa-icon [icon]="faGithub"></fa-icon></a>
+    </div>
+
+    <div class="footer">
+      <p>&copy; {{ year }} Michael Stowe</p>
+    </div>
   </div>
 
   <div class="main-section">

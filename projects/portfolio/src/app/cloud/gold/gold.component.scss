@@ -4,3 +4,9 @@ iframe {
     margin-top: 30px;
     box-shadow: 5px 5px 20px -10px $black;
 }
+
+@media screen and (max-width: 950px) {
+    iframe {
+        width: 100%;
+    }
+}

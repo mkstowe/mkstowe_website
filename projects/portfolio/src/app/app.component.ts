@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { translateTransition } from './routing-transitions';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -16,8 +16,11 @@ import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 export class AppComponent implements OnInit {
 
   year = new Date().getFullYear();
+  mediaQuery1 = window.matchMedia("(max-width: 950px)");
+  mediaQuery2 = window.matchMedia("(min-width: 950px)");
 
   faEnvelope = faEnvelope;
+  faBars = faBars;
   faGithub = faGithub;
   faLinkedin = faLinkedinIn;
 
@@ -33,7 +36,23 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.events.subscribe((evt) => {
-      setTimeout(() => document.getElementsByClassName("content-section")[0].scrollTo({top: 0, left: 0, behavior: 'auto'}), 200)
-  });
+      setTimeout(() => document.getElementsByClassName("content-section")[0].scrollTo({top: 0, left: 0, behavior: 'auto'}), 200);
+      document.getElementsByClassName("mobile-menu")[0].classList.remove("open");
+    });
+
+    this.closeMenu(this.mediaQuery1);
+    this.closeMenu(this.mediaQuery2);
+    this.mediaQuery1.addEventListener("change", this.closeMenu);
+    this.mediaQuery2.addEventListener("change", this.closeMenu);
+  }
+
+  toggleMenu() {
+    document.getElementsByClassName("mobile-menu")[0].classList.toggle("open");
+  }
+
+  closeMenu(x) {
+    if (x.matches) {
+      document.getElementsByClassName("mobile-menu")[0].classList.remove("open");
+    }
   }
 }

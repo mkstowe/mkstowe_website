@@ -10,3 +10,9 @@ iframe {
         margin: 10px 0;
     }
 }
+
+@media screen and (max-width: 950px) {
+    iframe {
+        width: 100%;
+    }
+}
