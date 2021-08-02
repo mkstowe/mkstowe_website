@@ -22,7 +22,11 @@
 
   <div class="mobile-header">
     <a routerLink=""><h1 class="is-uppercase">Michael Stowe</h1></a>
-    <fa-icon [icon]="faBars" class="menu-icon" (click)="toggleMenu()"></fa-icon>
+    <button class="hamburger hamburger--slider menu-icon" [class.is-active]="menuActive==true" (click)="toggleMenu()" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
   </div>
 
   <div class="mobile-menu">
