@@ -26,4 +26,5 @@ artifacts:
   files:
     - "**/*"
   discard-paths: yes
-  base-directory: 'dist/portfolio'
+  base-directory: dist/*
+
