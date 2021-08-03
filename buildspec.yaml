@@ -13,7 +13,6 @@ phases:
   pre_build:
     commands:
       - cd portfolio
-      - rm packagelock.json
       - echo installing dependencies...
       - npm i -g @angular/cli
       - npm install
