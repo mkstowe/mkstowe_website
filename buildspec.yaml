@@ -20,9 +20,8 @@ phases:
     commands:
       - echo building...
       - ng build
-      - ls
-      - pwd
+      - cd
 artifacts:
   files:
     - "**/*"
-  base-directory: dist
+  base-directory: dist/portfolio/
