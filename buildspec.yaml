@@ -20,8 +20,10 @@ phases:
     commands:
       - echo building...
       - ng build
+      - ls
+      - pwd
 artifacts:
   files:
     - "**/*"
   discard-paths: yes
-  base-directory: 'dist*'
+  base-directory: 'dist/portfolio'
