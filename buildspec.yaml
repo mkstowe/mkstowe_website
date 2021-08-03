@@ -12,7 +12,6 @@ phases:
       - apt install --no-install-recommends yarn
   pre_build:
     commands:
-      - aws s3 rm --recursive "s3://mkstowe-site/"
       - cd portfolio
       - echo installing dependencies...
       - npm i -g @angular/cli
