@@ -24,6 +24,7 @@ phases:
     commands:
       - echo building...
       - ng build
+      - cd ..
 artifacts:
   files:
     - './**/*'
