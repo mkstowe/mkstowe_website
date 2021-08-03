@@ -27,5 +27,5 @@ phases:
       - cd
 artifacts:
   files:
-    - "**/*"
-  base-directory: dist/portfolio/
+    - '**/*'
+  base-directory: 'dist*'
