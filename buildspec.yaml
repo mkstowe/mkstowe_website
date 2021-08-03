@@ -23,5 +23,5 @@ phases:
 
 artifacts:
   files:
-    - 'portfolio/dist/portfolio/**/*'
-  discard-paths: yes
+    - 'portfolio/dist/portfolio/*'
+    - 'portfolio/dist/portfolio/assets/*'
