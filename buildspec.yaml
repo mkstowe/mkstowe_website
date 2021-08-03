@@ -23,4 +23,5 @@ phases:
 
 artifacts:
   files:
-    - 'portfolio/dist/portfolio/**/*'
+    - '**/*'
+  base-directory: portfolio/dist/portfolio
