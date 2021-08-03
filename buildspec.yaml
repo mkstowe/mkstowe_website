@@ -23,10 +23,4 @@ phases:
 
 artifacts:
   files:
-    - 'portfolio/dist/portfolio/*'
-  discard-paths: yes
-  secondary-artifacts:
-    assets:
-      files:
-        'portfolio/dist/portfolio/assets/**/*'
-      discard-paths: no
+    - 'portfolio/dist/portfolio/**/*'
