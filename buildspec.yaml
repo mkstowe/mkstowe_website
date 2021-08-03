@@ -1,9 +1,5 @@
 version: 0.2
 
-env:
-  variables:
-    BUILD_FOLDER: "dist"
-
 phases:
   install:
     commands:
@@ -26,5 +22,5 @@ phases:
       - ng build
 artifacts:
   files:
-    - '*'
-  base-directory: dist
+    - '**/*'
+  base-directory: 'dist/portfolio'
