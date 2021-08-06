@@ -30,11 +30,13 @@ phases:
       - ng build --base-href /dashboard/
 artifacts:
   secondary-artifacts:
-    artifact1:
+    portfolio:
       base-directory: portfolio/dist/portfolio
       files:
         - '**/*'
-    artifact2:
+      name: portfolio
+    dashboard:
       base-directory: dashboard/dist/dashboard
       files:
         - '**/*'
+      name: dashboard
