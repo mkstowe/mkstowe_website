@@ -29,12 +29,10 @@ phases:
       - echo building dashboard...
       - ng build --base-href /dashboard/
 artifacts:
+  base-directory: portfolio/dist/porfolio
+  files:
+    - '**/*'
   secondary-artifacts:
-    portfolio:
-      base-directory: portfolio/dist/portfolio
-      files:
-        - '**/*'
-      name: portfolio
     dashboard:
       base-directory: dashboard/dist/dashboard
       files:
