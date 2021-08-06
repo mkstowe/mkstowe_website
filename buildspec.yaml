@@ -29,7 +29,7 @@ phases:
       - echo building dashboard...
       - ng build --base-href /dashboard/
 artifacts:
-  base-directory: portfolio/dist/porfolio
+  base-directory: portfolio/dist/porftolio
   files:
     - '**/*'
   secondary-artifacts:
