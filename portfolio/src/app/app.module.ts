@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,6 +29,8 @@ import { VariegataPost7Component } from './variegata/variegata-post7/variegata-p
 import { VariegataPost8Component } from './variegata/variegata-post8/variegata-post8.component';
 import { VariegataPost9Component } from './variegata/variegata-post9/variegata-post9.component';
 import { VariegataPost10Component } from './variegata/variegata-post10/variegata-post10.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ShellComponent } from './shell/shell.component';
 
 @NgModule({
   declarations: [
@@ -55,12 +58,15 @@ import { VariegataPost10Component } from './variegata/variegata-post10/variegata
     VariegataPost8Component,
     VariegataPost9Component,
     VariegataPost10Component,
+    DashboardComponent,
+    ShellComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -16,25 +16,12 @@ phases:
       - echo installing dependencies for root...
       - npm i -g @angular/cli
       - npm install
-      - cd ../dashboard
-      - echo installing dependencies for dashboard...
-      - npm i -g @angular/cli
-      - npm install
   build:
     commands:
       - cd ../portfolio
       - echo building root...
       - ng build
-      - cd ../dashboard
-      - echo building dashboard...
-      - ng build --base-href /dashboard/
 artifacts:
   base-directory: portfolio/dist/portfolio
   files:
     - '**/*'
-  secondary-artifacts:
-    dashboard:
-      base-directory: dashboard/dist/dashboard
-      files:
-        - '**/*'
-      name: dashboard

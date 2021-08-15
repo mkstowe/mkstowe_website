@@ -1,20 +1,23 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Observable, timer } from 'rxjs';
 import { map } from 'rxjs/operators'
-import { ImageApiService } from './image-api.service';
-
+import { ImageApiService } from '../image-api.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss']
 })
-export class AppComponent implements OnInit {
+export class DashboardComponent implements OnInit {
+
   divHeight: string;
   dateTime: Observable<Date>;
   image: any;
 
-  constructor(private imageApiService: ImageApiService) { }
+  constructor(private imageApiService: ImageApiService, private titleService: Title) {
+    this.titleService.setTitle("~");
+  }
 
   ngOnInit() {
     this.dateTime = timer(0, 1000).pipe(
@@ -28,4 +31,5 @@ export class AppComponent implements OnInit {
       this.image = resp;
     });
   }
+
 }
