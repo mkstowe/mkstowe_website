@@ -1,0 +1,9 @@
+name = "site-worker"
+type = "webpack"
+route = 'https://mkstowe.com'
+zone_id = ''
+usage_model = ''
+compatibility_flags = []
+workers_dev = true
+site = {bucket = "portfolio/dist/portfolio",entry-point = "workers-site"}
+compatibility_date = "2022-09-11"
