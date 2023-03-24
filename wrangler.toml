@@ -1,9 +1,8 @@
+main = "workers-site/index.js"
 name = "site-worker"
-type = "webpack"
 route = 'https://mkstowe.com'
-zone_id = ''
 usage_model = 'bundled'
 compatibility_flags = []
 workers_dev = true
-site = {bucket = "portfolio/dist/portfolio",entry-point = "workers-site"}
+site = {bucket = "portfolio/dist/portfolio"}
 compatibility_date = "2022-09-11"
