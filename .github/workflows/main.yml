@@ -15,7 +15,8 @@ jobs:
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org/
-      - run: cd portfolio ; npm ci ; npm i -g @angular/cli > /dev/null ; ng build
+      - run: npm i -g @cloudflare/kv-asset-handler @angular/cli > /dev/null
+      - run: cd portfolio ; npm ci ; ng build
       - name: Publish
         uses: cloudflare/wrangler-action@2.0.0
         with:
