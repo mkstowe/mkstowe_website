@@ -18,11 +18,18 @@
 }
 
 app-skill {
-    width: 50%;
+    width: calc(50% - 50px);
+    margin-right: 50px;
     margin-bottom: 25px;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1450px) {
+    app-skill {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
     .skill-list {
         display: block;
     }

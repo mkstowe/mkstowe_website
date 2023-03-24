@@ -22,15 +22,6 @@
   font-size: 24px;
   text-transform: uppercase;
   border-top: 3px solid $color-2;
-
-  h3 {
-    font-weight: 700;
-    color: $color-2;
-    letter-spacing: -2px;
-    width: 100%;
-    text-align: center;
-    font-size: 2vw;
-  }
 }
 
 .tab-tile {
@@ -38,6 +29,15 @@
 
   padding: 12px;
   transition: all 0.2s ease-out;
+
+  h3 {
+    font-weight: 700;
+    font-size: 48px;
+    color: $color-2;
+    letter-spacing: -2px;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .tab.selected .tab-tile {
@@ -80,6 +80,12 @@
 .tab.selected h3 {
   color: $color-1;
   transition-delay: 0.35s;
+}
+
+@media screen and (max-width: 2100px) {
+  .tab-tile h3 {
+    font-size: 32px;
+  }
 }
 
 @media screen and (max-width: 950px) {

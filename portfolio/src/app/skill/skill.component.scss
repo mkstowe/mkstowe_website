@@ -48,25 +48,32 @@
     color: $color-2;
 }
 
-@media screen and (max-width: 950px) {
-    .skill-wrapper {
-        display: block;
-    }
-}
-
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1450px) {
     .skill-name {
         font-size: 24px !important;
         top: 10px !important;
     }
 }
 
-@media screen and (max-width: 550px) {
-    .skill-name {
-        font-size: 20px !important;
-        top: 10px !important;
-    }
+/* @media screen and (max-width: 1280px) { */
+/* } */
 
+/* @media screen and (max-width: 950px) { */
+    /* .skill-wrapper { */
+        /* display: block; */
+    /* } */
+/* } */
+
+@media screen and (max-width: 1280px) {
+    /* .skill-wrapper {
+        display: block;
+    } */
+
+    .skill-name {
+        font-size: 32px !important;
+        top: 4px !important;
+    }
+/*
     .devicon-plain {
         font-size: 50px;
     }
@@ -74,5 +81,5 @@
     .exp-bar {
         margin-top: 10px;
         height: 15px;
-    }
+    } */
 }
