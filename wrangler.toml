@@ -2,7 +2,7 @@ name = "site-worker"
 type = "webpack"
 route = 'https://mkstowe.com'
 zone_id = ''
-usage_model = ''
+usage_model = 'bundled'
 compatibility_flags = []
 workers_dev = true
 site = {bucket = "portfolio/dist/portfolio",entry-point = "workers-site"}
