@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { translateTransition } from '..//routing-transitions';
 import { faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons';
