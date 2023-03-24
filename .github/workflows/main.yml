@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v2.7.0
+      - uses: actions/setup-node@v3.6.0
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org/
@@ -22,4 +22,3 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           workingDirectory: 'portfolio'
-          precommands: npm i -g @cloudflare/kv-asset-handler
