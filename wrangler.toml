@@ -1,8 +1,0 @@
-main = "workers-site/index.js"
-name = "site-worker"
-route = 'https://mkstowe.com'
-usage_model = 'bundled'
-compatibility_flags = []
-workers_dev = true
-site = {bucket = "portfolio/dist/portfolio"}
-compatibility_date = "2022-09-11"
