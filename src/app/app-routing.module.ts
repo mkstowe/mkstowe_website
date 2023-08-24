@@ -7,7 +7,6 @@ import { PreAlphaIComponent } from './cloud/pre-alpha-i/pre-alpha-i.component';
 import { PreAlphaIIComponent } from './cloud/pre-alpha-ii/pre-alpha-ii.component';
 import { PreAlphaIIIPreBetaIComponent } from './cloud/pre-alpha-iii-pre-beta-i/pre-alpha-iii-pre-beta-i.component';
 import { PreBetaIPreBetaIIComponent } from './cloud/pre-beta-i-pre-beta-ii/pre-beta-i-pre-beta-ii.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { ExperiencePageComponent } from './experience-page/experience-page.component';
 import { ProjectsPageComponent } from './projects-page/projects-page.component';
 import { ShellComponent } from './shell/shell.component';
@@ -52,8 +51,6 @@ const routes: Routes = [
       { path: 'projects/variegata/2021/04/21', component: VariegataPost10Component, data: { tab: 6 } },
     ]
   },
-
-  { path: 'dash', component: DashboardComponent },
 ];
 
 @NgModule({

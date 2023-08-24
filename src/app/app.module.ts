@@ -29,7 +29,6 @@ import { VariegataPost7Component } from './variegata/variegata-post7/variegata-p
 import { VariegataPost8Component } from './variegata/variegata-post8/variegata-post8.component';
 import { VariegataPost9Component } from './variegata/variegata-post9/variegata-post9.component';
 import { VariegataPost10Component } from './variegata/variegata-post10/variegata-post10.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { ShellComponent } from './shell/shell.component';
 
 @NgModule({
@@ -58,7 +57,6 @@ import { ShellComponent } from './shell/shell.component';
     VariegataPost8Component,
     VariegataPost9Component,
     VariegataPost10Component,
-    DashboardComponent,
     ShellComponent,
   ],
   imports: [
