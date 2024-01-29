@@ -1,21 +1,30 @@
 @import "../../variables.scss";
 
 .skill-wrapper {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     width: 100%;
     max-width: 450px;
 }
 
 .skill {
     display: flex;
+    align-items: center;
+    gap: 5px;
     height: 60px;
 
     .skill-name {
-        position: relative;
-        top: 4px;
+        // display: flex;
+        align-items: center;
+        // position: relative;
+        // top: 4px;
         font-size: 32px;
         padding-left: 15px;
+        // line-height: 60px;
+    }
+
+    ng-icon {
+        font-size: 32px;
     }
 }
 
